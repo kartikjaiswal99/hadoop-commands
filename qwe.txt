@@ -1,0 +1,47 @@
+hadoop fs -ls /
+Lists files and directories in the root of HDFS.
+
+hadoop fs -mkdir /kj
+Creates a directory named /kj in HDFS.
+
+hadoop fs -put kartic.txt kj/
+Uploads the local file kartic.txt to the /kj directory in HDFS.
+
+hadoop fs -get /kj/kartic.txt localfile.txt
+Downloads the file /kj/kartic.txt from HDFS to the local file localfile.txt.
+
+hadoop fs -copyFromLocal /home/kartik/Desktop/houghcircle.py /kj/
+Uploads the local file /home/kartik/Desktop/houghcircle.py to /kj in HDFS.
+
+hadoop fs -cat /kj/kartic.txt
+Displays the contents of /kj/kartic.txt in HDFS.
+
+hadoop fs -rm /kj/kartic.txt
+Deletes the file /kj/kartic.txt from HDFS.
+
+hadoop fs -chmod 755 /kj/localfile.txt
+Changes permissions of /kj/localfile.txt to 755 (rwxr-xr-x) in HDFS.
+
+hadoop dfs -getmerge /kj /mnt/c/Users/karti/Desktop/kartik.py
+Merges all files in /kj into a single file and saves it as kartik.py on the local filesystem.
+
+hadoop dfs -mkdir /abhishek
+Creates a directory named /abhishek in HDFS.
+
+hadoop dfs -mv /kj/localfile.txt /abhishek
+Moves /kj/localfile.txt to /abhishek in HDFS.
+
+hadoop dfs -setrep 3 /abhishek/localfile.txt
+Sets the replication factor of /abhishek/localfile.txt to 3.
+
+hadoop dfs -tail /abhishek/localfile.txt
+Displays the last part of /abhishek/localfile.txt in HDFS.
+
+hadoop fs -put /mnt/c/Users/karti/Desktop/houghcircle.py /abhishek
+Uploads the local file /mnt/c/Users/karti/Desktop/houghcircle.py to /abhishek in HDFS.
+
+hadoop fs -du /abhishek
+Displays the size of files and directories in /abhishek in HDFS.
+
+hadoop dfs -test -e filename
+Checks if the file or directory named filename exists in HDFS.

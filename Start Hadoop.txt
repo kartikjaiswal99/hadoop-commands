@@ -1,0 +1,31 @@
+Start Hadoop Daemons:
+/usr/local/hadoop/bin/start-all.sh
+
+Check if Hadoop is Running:
+jps
+
+Using Hadoop
+Copy Files to HDFS:
+/usr/local/hadoop/bin/hadoop dfs -copyFromLocal /home/kartik99/Downloads /user/kartik99
+/usr/local/hadoop/bin/hadoop dfs -ls /user/kartik99
+
+Run a MapReduce Job:
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/hadoop-examples-1.2.1.jar wordcount /user/kartik99 /user/kartik99/output
+
+/usr/local/hadoop/bin/hadoop dfs -ls /user/kartik99/output
+
+Stop Hadoop Daemons:
+/usr/local/hadoop/bin/stop-all.sh
+
+Hadoop Web Interfaces
+NameNode Web UI: http://localhost:50070/
+JobTracker Web UI: http://localhost:50030/
+TaskTracker Web UI: http://localhost:50060/
+
+
+to find the file within the dir:
+find ~/hadoop-1.2.1 -name "hadoop-streaming-1.2.1.jar"
+
+
+extract the tar file:
+tar -xzf hadoop-1.2.1.tar.gz	
