@@ -28,4 +28,24 @@ find ~/hadoop-1.2.1 -name "hadoop-streaming-1.2.1.jar"
 
 
 extract the tar file:
-tar -xzf hadoop-1.2.1.tar.gz	
+tar -xzf hadoop-1.2.1.tar.gz
+
+output cmd:	
+hadoop jar /path/to/hadoop-streaming.jar \
+  -input /path/to/weather_data.txt \
+  -output /path/to/output \
+  -mapper /path/to/mapper.py \
+  -reducer /path/to/reducer.py \
+  -file /path/to/mapper.py \
+  -file /path/to/reducer.py
+
+
+hadoop jar home/kartik99/hadoop-1.2.1/contrib/streaming/hadoop-streaming-1.2.1.jar \
+  -input /matrix/m1.txt \
+  -input /matrix/m2.txt \
+  -output /matrix/output \
+  -mapper ~/matrix/mapper.py \
+  -reducer ~/matrix/reducer.py \
+  -file ~/matrix/mapper.py \
+  -file ~/matrix/reducer.py
+
