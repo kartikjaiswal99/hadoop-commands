@@ -49,3 +49,5 @@ hadoop jar home/kartik99/hadoop-1.2.1/contrib/streaming/hadoop-streaming-1.2.1.j
   -file ~/matrix/mapper.py \
   -file ~/matrix/reducer.py
 
+
+this is kartik commiting directly from vs-code.
